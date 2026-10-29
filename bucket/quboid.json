@@ -1,0 +1,31 @@
+{
+    "version": "1.0.1",
+    "description": "Keyboard window snapping for Windows 10/11 with Rectangle's default shortcuts.",
+    "homepage": "https://github.com/SormanoS/quboid",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/SormanoS/quboid/releases/download/1.0.1/Quboid-1.0.1-windows-x64-portable.zip",
+            "hash": "9cb4256cd9a2a78e09f6211956c45674276cdfd1c531a18c6c5805e74c3f1586"
+        }
+    },
+    "bin": "quboid-app.exe",
+    "shortcuts": [
+        [
+            "quboid-app.exe",
+            "Quboid"
+        ]
+    ],
+    "persist": "config.json",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/SormanoS/quboid/releases/download/$version/Quboid-$version-windows-x64-portable.zip",
+                "hash": {
+                    "url": "$baseurl/SHA256SUMS.txt"
+                }
+            }
+        }
+    }
+}
